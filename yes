@@ -1,0 +1,15 @@
+FROM ubuntu:18.04
+RUN apt-get update && \
+  apt-get install \
+  build-essential \
+  cmake \
+  curl \
+  file \
+  git \
+  musl-dev \
+  musl-tools \
+  pkg-config \
+  sudo \
+  xutils-dev \
+  zip \
+  && apt-get clean && rm -rf /var/lib/apt/lists/*
