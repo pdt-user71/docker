@@ -11,6 +11,7 @@ RUN tar -xJf /usr/src/things/big.tar.xz -C /usr/src/things
 RUN make -C /usr/src/things all
 ADD requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
+RUN tar -xJf /usr/src/things/big.tar.xz -C /usr/src/things/all
 RUN bash -c "cd /resmoke &&
 python3.9 -m venv
 python3-venv && .
